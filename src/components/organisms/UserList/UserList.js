@@ -4,17 +4,13 @@ import UserListItem from 'components/molecules/UserListItem/UserListItem';
 import { StyledList } from './UserList.styles';
 import { Title } from 'components/atoms/Title/Title';
 
-const UserList = ({ users, deleteUser }) => {
+const UserList = ({ users }) => {
   return (
     <>
       <Title>Students list</Title>
       <StyledList>
         {users.map((userData) => (
-          <UserListItem
-            deleteUser={deleteUser}
-            key={userData.name}
-            userData={userData}
-          />
+          <UserListItem key={userData.name} userData={userData} />
         ))}
       </StyledList>
     </>
